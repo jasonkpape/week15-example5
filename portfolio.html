@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>2D Web Animation :: Portfolio</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A homepage for the projects created in an animation class">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css" media="screen">
+	<link rel="stylesheet" href="print.css" media="print">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	
+	<!-- Remainder of head used for parallax effect -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+<script>
+
+function startParallax() {
+	var scene = document.getElementById('scene');
+	var parallaxInstance = new Parallax(scene);
+	
+	document.getElementById('scene').style.height = document.getElementById('wrapper2').scrollHeight + "px";
+	document.getElementById('scene').style.width = document.getElementById('wrapper2').scrollWidth + "px";
+	
+	console.log(document.body.scrollHeight);
+	console.log(document.getElementById('scene').style.minHeight);
+}
+
+</script>
+</head>
+
+<body onload="startParallax();">
+
+
+<div class="container-fluid">
+<div id="wrapper1"> <!-- Two wrappers for two-color border -->
+<div id="wrapper2">
+
+
+<!-- set up parallax layers in ul -->
+<ul id="scene" class="scene unselectable">
+	<li class="layer" data-depth="0.1">
+		<div class="background">
+		</div>
+	</li>
+	<!-- uncomment for second layer
+	<li class="layer" data-depth="0.6">
+		<div class="background">
+		</div>
+	</li>
+	-->
+</ul>
+
+<script>
+// Toggle Navigation on mobile display
+$(document).ready(function() {
+		$('#toggle').click(function() {
+			$('nav').slideToggle(250);
+			$('#show-nav, #hide-nav').toggle();
+		});
+});
+
+</script>
+
+<header> <!-- Skip to Content link for accessibility purposes -->
+	<a id="skip" href="#content">Skip to Content</a>
+	<h1>2D Web Animation</h1>
+</header>
+
+<div class="jumbotron jumbotron-fluid hero-container"></div> <!-- background image set in style.css -->
+
+<div id="toggle"> <!-- Toggle button for navigation on mobile; not displayed on larger screens -->
+	<ul>
+		<li><a href="#"><span id="show-nav">Show Navigation</span><span id="hide-nav">Hide Navigation</span></a></li>
+	</ul>
+</div>
+
+<nav>
+	<ul> <!-- The line breaks between li's were causing issues with the nav display, so I got rid of them. -->
+		<li><a href="index.html">Bio</a></li><li><div class="flash2"></div><div class="flash"></div><a id="activepage" href="portfolio.html">Portfolio</a></li><li><a href="resume.html">Résumé</a></li><li><a href="courses.html">Courses</a></li><li><a href="http://www.jasonkendrickpape.com/" target="_blank">Photoshop</a></li>
+	</ul>
+</nav>
+
+<aside class="unused"> <!-- Set class of aside to "unused" to hide this sidebar or any element within -->
+	<h3 id="mini-glossary" class="unused">Mini-Glossary</h3>
+	<dl class="unused">
+		<dt>First term</dt>
+		<dd>First definition</dd>
+		<dt>Second term</dt>
+		<dd>Second definition</dd>
+	</dl>
+</aside>
+
+<main id="content">
+	<h2>DGIM 2521 2D Web Animation Portfolio</h2>
+	<figure class="unused floatright">
+		<img class="rounded img-fluid" src="images/capybara-400w-300h.jpg" width="400" height="300" alt="illustration of a capybara">
+	</figure>
+	<p class="first-p">This page contains links to individual examples of animated or interactive web pages created with Tumult Hype for my 2D web animation class. More will ber adding throughout the Spring 2020 semester.</p>
+
+	<h3>Week 1</h3>
+	<ul>
+		<li><a href="/intro-example" target="_blank">Intro Assignment</a></li>
+	</ul>
+	
+	<h3>Week 2</h3>
+	<ul>
+		<li><a href="/car-example" target="_blank">Rotating Car</a></li>
+		<li><a href="/easing-examples/" target="_blank"">Easing Examples</a></li>
+	</ul>
+	
+	<h3>Week 3</h3>
+	<ul>
+		<li><a href="/week3-example1/" target="_blank">Color and Border Width Animation</li>
+		<li><a href="/week3-example2/" target="_blank">Font Animation</li>
+		<li><a href="/week3-example3/" target="_blank">Capo Tool Exercise</li>
+		<li><a href="/week3-example4/" target="_blank">Looping Exercise</li>
+		<li><a href="/week3-example5/" target="_blank">Grouping 
+		Exercise</li>
+		<li><a href="/week3-inclass1/" target="_blank">Wipe Effect</li>
+		<li><a href="/handout2/" target="_blank">Rotation Around Axes</a></li>
+	</ul>
+	
+	<h3>Week 4</h3>
+	<ul>
+		<li><a href="/week4-example1/" target="_blank">Multiple Timelines (Motorcycle Race)</a></li>
+		<li><a href="/week4-example2/" target="_blank">Motorcycle Race with Sound Effect and Reset Button</a></li>
+		<li><a href="/week4-example3/" target="_blank">Race with Winner Announcement</a></li>
+		<li><a href="/week4-example5/" target="_blank">Clock</a></li>
+		<li><a href="/week4-example6/" target="_blank">Clock with Sounds</a></li>
+	</ul>
+	
+	<h3>Week 5</h3>
+	<ul>
+		<li><a href="/week5-example1/" target="_blank">Jigsaw Puzzle Snap Demo</a></li>
+		<li><a href="/week5-example2/" target="_blank">Slider Control</a></li>
+		<li><a href="/week5-example3/" target="_blank">Multiple Sliders</a></li>
+		<li><a href="/week5-example4/" target="_blank">Slider Control with Percentage Indicator</a></li>
+		<li><a href="/week5-example5/" target="_blank">Horizontal and Vertical Sliders</a></li>
+		<li><a href="/week5-example6/" target="_blank">Motion Path Example</a></li>
+		<li><a href="/week5-inclass/" target="_blank">Roller Coaster</a></li>
+		<li><a href="/handout3/" target="_blank">Shinjuku Motorcycle Tour</a></li>
+	</ul>
+	
+	<h3>Week 6</h3>
+	<ul>
+		<li><a href="/week6-example1/" target="_blank">Rocket Launch Countdown Using Timeline</a></li>
+		<li><a href="/week6-example2/" target="_blank">Launch Countdown Using JavaScript</a></li>
+		<li><a href="/week6-example3/" target="_blank">Image Slideshow</a></li>
+		<li><a href="/week6-example5/" target="_blank">Die Roll Program - Phase 1 of 2</a></li>
+		<li><a href="/week6-example6/" target="_blank">Die Roll Program - Phase 2 of 2</a></li>
+	</ul>
+	
+	<h3>Week 7</h3>
+	<ul>
+		<li><a href="/week7-example1/" target="_blank">Embedded Audio Control</a></li>
+		<li><a href="/week7-example2/" target="_blank">Audio Buttons</a></li>
+		<li><a href="/week7-example3/" target="_blank">Timeline-Controlled Audio</a></li>
+		<li><a href="/week7-example4/" target="_blank">JavaScript-Triggered Audio</a></li>
+	</ul>
+	
+	<h3>Week 12</h3>
+	<ul>
+		<li><a href="/week12-example1/" target="_blank">Multiple Scenes with Individual Buttons for Each Scene</a></li>
+		<li><a href="/week12-example2/" target="_blank">Multiple Scenes with Next/Previous Arrow Buttons</a></li>
+		<li><a href="/week12-example3/" target="_blank">Multiple Scenes with Swipe Controls</a></li>
+		<li><a href="/global-var/" target="_blank">Global Variable Demonstration</a></li>
+		<li><a href="/handout4/" target="_blank">Storybook</a></li>
+	</ul>
+	
+	<h3>Week 13</h3>
+	<ul>
+		<li><a href="/week13-inclass/" target="_blank">Digital Sign</a></li>
+		<li><a href="/global-var2/" target="_blank">Global Variable Demo - Method 2</a></li>
+		<li><a href="/inventory-item/" target="_blank">Inventory Puzzle Demo</a></li>
+	</ul>
+	
+	<h3>Week 14</h3>
+	<ul>
+		<li><a href="/svg-example1/" target="_blank">Vector Drawing Animation</a></li>
+		<li><a href="/svg-example2/" target="_blank">Vector Morph Animation</a></li>
+		<li><a href="/svg-example3/" target="_blank">Vector Morph Background-Fill Demonstration</a></li>
+		<li><a href="/svg-example4/" target="_blank">Bézier Curve Animation</a></li>
+		<li><a href="/vector-name/" target="_blank">Vector Name Morph</a></li>
+		<li><a href="/svg-example5/" target="_blank">Pencil Tool Example</a></li>
+		<li><a href="/svg-example6/" target="_blank">Pencil Shape Morph Animation Example</a></li>
+		<li><a href="/svg-shape-morph/" target="_blank">Vector Shape Morph Animation</a></li>
+		<li><a href="/svg-logo-done/" target="_blank">Logo Draw Animation</a></li>
+		<li><a href="/extra-credit/" target="_blank">Pattern-Matching Game</a></li>
+	</ul>
+	
+	<h3>Week 15</h3>
+	<ul>
+		<li><a href="/week15-example1/" target="_blank">Embedded Audio Control 2</a></li>
+		<li><a href="/week15-example2/" target="_blank">Audio Buttons 2</a></li>
+		<li><a href="/week15-example3/" target="_blank">Timeline-Controlled Audio 2</a></li>
+		<li><a href="/jsaudio2/" target="_blank">JavaScript-Triggered Audio 2</a></li>
+		<li><a href="/week15-example5/" target="_blank">Typography Exercise</a></li>
+	</ul>
+</main>
+
+<footer>
+	Copyright &copy; 2020 Jason Kendrick Pape
+</footer>
+
+
+<script>
+
+var scene = document.getElementById('scene');
+var parallaxInstance = new Parallax(scene);
+
+</script>
+
+</div> <!-- end of wrapper1 -->
+</div> <!-- end of wrapper2 -->
+</div> <!-- /.container-fluid -->
+</body>
+</html>
